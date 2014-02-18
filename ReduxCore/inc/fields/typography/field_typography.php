@@ -32,7 +32,7 @@ class ReduxFramework_typography extends ReduxFramework {
      */
     function __construct( $field = array(), $value ='', $parent ) {
     
-        //parent::__construct( $parent->sections, $parent->args );
+        parent::__construct( $parent->sections, $parent->args );
         $this->parent = $parent;
         $this->field = $field;
         $this->value = $value;
@@ -416,7 +416,7 @@ class ReduxFramework_typography extends ReduxFramework {
 
       global $wp_styles;
 
-      $font = $this->value;
+      $font = $GLOBALS[$this->args['opt_name']][$this->field['id']];
 
         // Check for font-backup.  If it's set, stick it on a variabhle for 
         // later use.

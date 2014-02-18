@@ -380,8 +380,9 @@ if( !class_exists( 'ReduxFramework_background' ) ) {
 
         public function getCSS() {
             $css = '';
-            if (!empty($this->value)) {
-                foreach($this->value as $key=>$value) {
+            $values = $GLOBALS[$this->args['opt_name']][$this->field['id']];
+            if (!empty($values)) {
+                foreach($values as $key=>$value) {
                     if (!empty($value) && $key != "media") {
                         if ($key == "background-image") {
                             $css .= $key.":url('".$value."');";
