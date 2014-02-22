@@ -74,10 +74,25 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 
 ### Master ###
 
-= 3.1.7 =
+= 3.1.8.2 =
+* Added:      email_not_empty validation field.
+* Reverted:   email validation field only checks for valid email.  not_empty check moved to new validation field.
+
+= 3.1.8.1 =
+* Fixed:      Hide demo hook wasn't hiding demo links.
+
+= 3.1.8 =
+* Fixed:    Improper enqueue in tracking class.
+* Fixed:    Few classes missed for various fields.
+* Fixed:    Spacing field kicking back notices and warnings when 'output' wasn't set.
+* Modified: Added file_exists check to all include lines in framework.php
+* Fixed:    Background field now works with dynamic preview as it should.
+* Fixed:    Extension fields now enqueueing properly.
+* Added:    Text-align to typography field.
 * Fixed:    Servers returning forwards slashes in TEMPLATEPATH, while Redux is installed embedded would not show options menu.
 * Fixed:    On and Off for switch field not displaying language translation.
 * Fixed:    email validation allowing a blank field.
+* Fixed:    Now allow for empty values as valid keys.
 * Added:    Dismiss option to admin notices (internal function)
 
 = 3.1.6 =
